@@ -7,63 +7,6 @@ import com.epam.task2.entity.criteria.SearchCriteria;
 import java.util.Map;
 
 public class Validator {
-    public static boolean criteriaValidator(Criteria criteria) {
-
-        for (Map.Entry<String, Object> parameter : criteria.getCriteria().entrySet()) {
-            if(parameter.getKey().equals(ApplianceParser.POWER_CONSUMPTION) && Integer.parseInt(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.WEIGHT) && Double.parseDouble(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.CAPACITY) && Integer.parseInt(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.DEPTH) && Double.parseDouble(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.HEIGHT) && Double.parseDouble(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.WIDTH) && Double.parseDouble(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.BATTERY_CAPACITY) && Double.parseDouble(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.MEMORY_ROM) && Integer.parseInt(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.SYSTEM_MEMORY) && Integer.parseInt(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.DISPLAY_INCHES) && Double.parseDouble(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.POWER_CONSUMPTION) && Integer.parseInt(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.NUMBER_OF_SPEAKERS) && Integer.parseInt(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-
-            if(parameter.getKey().equals(ApplianceParser.CORD_LENGTH) && Integer.parseInt(parameter.getValue().toString()) <= 0) {
-                return false;
-            }
-        }
-        return true;
-    }
 
     public static boolean applianceValidator(Appliance appliance) {
 

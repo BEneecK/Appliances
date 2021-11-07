@@ -17,9 +17,6 @@ public class ApplianceServiceImpl implements ApplianceService {
 
     @Override
     public List<Appliance> find(Criteria criteria) throws IOException, ParserConfigurationException, SAXException {
-        if (!Validator.criteriaValidator(criteria)) {
-            return null;
-        }
 
         DAOFactory factory = DAOFactory.getInstance();
         ApplianceDAO applianceDAO = factory.getApplianceDAO();
@@ -28,7 +25,7 @@ public class ApplianceServiceImpl implements ApplianceService {
     }
 
     @Override
-    public void add (String applianceType, Appliance appliance) throws ParserConfigurationException, IOException, TransformerException, SAXException {
+    public void add(String applianceType, Appliance appliance) throws ParserConfigurationException, IOException, TransformerException, SAXException {
 
         if (!Validator.applianceValidator(appliance)) {
             return;

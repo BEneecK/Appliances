@@ -27,8 +27,6 @@ public class Main {
 
         PrintApplianceInfo.printApplianceList(filteredOvenList);
 
-        ///////////////////////////////////////////////////////////////////////////////
-
         Criteria criteriaLaptop = new Criteria(Laptop.class.getSimpleName());
         criteriaLaptop.add(SearchCriteria.Laptop.DISPLAY_INCHES.toString(), 19.0);
         criteriaLaptop.add(SearchCriteria.Laptop.MEMORY_ROM.toString(), 4500);
